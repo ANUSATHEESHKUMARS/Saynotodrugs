@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Say No to Drugs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+                .main-header {
+            background: linear-gradient(rgba(41, 128, 185, 0.9), rgba(142, 68, 173, 0.9)),
+                        url('https://plus.unsplash.com/premium_photo-1738091397502-67a0d1dd2a1e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNheSUyMG5vJTIwdG8lMjBkcnVnc3xlbnwwfHwwfHx8MA%3D%3D') center/cover;
+            height: 70vh;
+            }
+
+            .header-overlay {
+                padding: 3rem;
+                background: rgba(0, 0, 0, 0.2);
+                border-radius: 15px;
+            }
+
+            .main-header h1 {
+                color: #ffffff;
+                font-size: 4rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            .main-header .subtitle {
+                color: #e8f6ff;
+                font-size: 1.8rem;
+                font-weight: 300;
+            }
+
+            .primary-btn {
+                background: linear-gradient(45deg, #2ecc71, #27ae60);
+                color: white;
+                border: none;
+                padding: 1.2rem 2.5rem;
+            }
+
+            .secondary-btn {
+                background: transparent;
+                color: #fff;
+                border: 2px solid #2ecc71;
+                padding: 1.2rem 2.5rem;
+            }
+
+            .header-btn:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            nav {
+                background: linear-gradient(to right, #2c3e50, #3498db);
+                padding: 1.5rem;
+            }
+
+            nav a {
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+
+            nav a:hover {
+                background: linear-gradient(to right, #3498db, #2980b9);
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+
+        .header-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .header-btn {
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .primary-btn {
+            background-color: #fff;
+            color: #1a237e;
+        }
+
+        .secondary-btn {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .header-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-wrapper {
+            position: relative;
+            max-height: 600px;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+        }
+
+        .hero-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .main-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .main-header .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .header-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header-btn {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+
+            .hero-image {
+                height: 400px;
+            }
+
+            .hero-text h2 {
+                font-size: 2rem;
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f2f5;
+        }
+
+        .main-header {
+            background: linear-gradient(rgba(63, 81, 181, 0.9), rgba(26, 35, 126, 0.9)),
+                        url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528') center/cover;
+            height: 70vh;
+        }
+
+        nav {
+            background: linear-gradient(to right, #1a237e, #3f51b5);
+            padding: 1.2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+            padding: 2rem;
+        }
+
+        .reasons {
+            padding: 3rem 2rem;
+            background-color: #e8eaf6;
+        }
+        nav a:hover {
+            background: #333333;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a:hover {
+            background: linear-gradient(to right, #2a3178, #3f51b5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .section {
+            display: none;
+            padding: 2rem;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        header {
+            background-color: #1a237e;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        .hero-cards {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.info-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.info-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-text {
+  padding: 1.2rem;
+}
+
+.card-text h3 {
+  color: #0d1557;
+  margin-bottom: 0.5rem;
+}
+
+.card-text p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+        h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        .subtitle { font-size: 1.2rem; }
+
+        .hero {
+            width: 100%;
+            max-height: 500px;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .about-content {
+            padding-right: 2rem;
+        }
+
+        .about-description {
+            font-size: 1.1rem;
+            margin: 1.5rem 0;
+            line-height: 1.8;
+        }
+
+        .mission-section,
+        .programs-section {
+            margin-top: 3rem;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .program-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .program-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .program-item i {
+            font-size: 2rem;
+            color: #1a237e;
+            margin-bottom: 1rem;
+        }
+
+        .program-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #1a237e;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-content {
+                padding-right: 0;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .reasons {
+            padding: 3rem 2rem;
+            background-color: #f5f5f5;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #1a237e;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .reason-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+            20%, 40%, 60%, 80% { transform: translateX(2px); }
+        }
+
+        .reason-card:hover {
+            animation: shake 0.5s ease-in-out;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .reason-card h3 {
+            color: #1a237e;
+            margin-bottom: 1rem;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846') center/cover;
+            color: white;
+            position: relative;
+            margin: 4rem 0;
+        }
+
+        #pledgeButton {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 1.2rem 3rem;
+            font-size: 1.3rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+        }
+
+        #pledgeButton:hover {
+            background-color: #27ae60;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+        }
+
+        footer {
+            background-color: #0d1557;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .stats {
+            padding: 3rem 2rem;
+            background-color: #e8eaf6;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonials {
+            padding: 3rem 2rem;
+            background-color: #f5f5f5;
+        }
+
+        .testimonial-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            margin-top: 1rem;
+            color: #1a237e;
+        }
+
+        .alternatives {
+            padding: 3rem 2rem;
+        }
+
+        .alternatives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .alternative-card {
+            background: #e8eaf6;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .alternative-card:hover {
+            transform: scale(1.03);
+        }
+
+        .alternative-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a237e;
+        }
+
+        .faq {
+            padding: 3rem 2rem;
+            background-color: #f5f5f5;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-message {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .subtitle { font-size: 1rem; }
+            .reasons, .stats, .testimonials, .alternatives, .faq { padding: 2rem 1rem; }
+            .reason-card, .stat-card, .testimonial, .alternative-card { padding: 1rem; }
+            nav ul { flex-direction: column; align-items: center; }
+            .stat-number { font-size: 2rem; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('vlog')">Vlog</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="home" class="section active">
+        <header class="main-header">
+            <div class="header-overlay">
+                <h1>Just Say No to Drugs</h1>
+                <p class="subtitle">Your future is worth protecting</p>
+                <div class="header-buttons">
+                    <a href="#learn" class="header-btn primary-btn">Learn More</a>
+                    <a href="#help" class="header-btn secondary-btn">Get Help Now</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero-cards">
+                <div class="card-container">
+                  <div class="info-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1738091397502-67a0d1dd2a1e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNheSUyMG5vJTIwdG8lMjBkcnVnc3xlbnwwfHwwfHx8MA%3D%3D" alt="Healthy Life Choices" />
+                    <div class="card-text">
+                      <h3>Choose Life</h3>
+                      <p>Your choices today shape your tomorrow. Stay strong, stay clean.</p>
+                    </div>
+                  </div>
+              
+                  <div class="info-card">
+                    <img src="https://cdn.pixabay.com/photo/2024/04/09/13/57/ai-generated-8686058_1280.jpg" alt="Say No" />
+                    <div class="card-text">
+                      <h3>Say No to Drugs</h3>
+                      <p>Don't let a moment steal your future. Help is always available.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+
+            <section class="reasons">
+                <h2>Why Say No to Drugs?</h2>
+                <div class="reasons-grid">
+                    <div class="reason-card">
+                        <h3>Protect Your Health</h3>
+                        <p>Drugs can cause severe damage to your body and mind, leading to long-term health problems, mental health disorders, and even fatal overdoses.</p>
+                    </div>
+                    <div class="reason-card">
+                        <h3>Save Your Future</h3>
+                        <p>Drug addiction can destroy career opportunities, relationships, and financial stability. Stay clean to achieve your dreams and goals.</p>
+                    </div>
+                    <div class="reason-card">
+                        <h3>Live Longer</h3>
+                        <p>Choose a drug-free life for longevity and happiness. Studies show that people who avoid drugs live healthier, more fulfilling lives.</p>
+                    </div>
+                    <div class="reason-card">
+                        <h3>Protect Your Loved Ones</h3>
+                        <p>Drug use doesn't just affect you—it impacts your family and friends who care about you. Your choices matter to those around you.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="stats">
+                <h2>The Harsh Reality</h2>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-number">21 Million</div>
+                        <p>Americans age 12 and older had a substance use disorder in 2022</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">107,000+</div>
+                        <p>Drug overdose deaths in the U.S. in 2021</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">50%</div>
+                        <p>Increase in teen drug-related deaths from 2019 to 2021</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1 in 8</div>
+                        <p>Teens who report misusing prescription drugs</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonials">
+                <h2>Real Stories</h2>
+                <div class="testimonial-container">
+                    <div class="testimonial">
+                        <p>"I lost five years of my life to addiction. It started as 'just trying it once' and turned into a nightmare that cost me my job, my home, and nearly my family. Getting clean was the hardest thing I've ever done, but it gave me my life back."</p>
+                        <div class="testimonial-author">- Michael R., 5 years sober</div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"My brother died from a fentanyl overdose when he was 22. He was smart, talented, and had so much potential. One bad decision led to addiction, and then it was too late. Please don't make the same mistake."</p>
+                        <div class="testimonial-author">- Sarah K., advocate</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="alternatives">
+                <h2>Healthy Alternatives</h2>
+                <p style="text-align: center; margin-bottom: 2rem;">When you feel pressured or stressed, try these positive activities instead:</p>
+                <div class="alternatives-grid">
+                    <div class="alternative-card">
+                        <div class="alternative-icon"><i class="fas fa-running"></i></div>
+                        <h3>Exercise</h3>
+                        <p>Physical activity releases natural endorphins that boost your mood and energy.</p>
+                    </div>
+                    <div class="alternative-card">
+                        <div class="alternative-icon"><i class="fas fa-music"></i></div>
+                        <h3>Creative Arts</h3>
+                        <p>Music, painting, writing - express yourself in healthy, fulfilling ways.</p>
+                    </div>
+                    <div class="alternative-card">
+                        <div class="alternative-icon"><i class="fas fa-hands-helping"></i></div>
+                        <h3>Volunteer</h3>
+                        <p>Helping others gives you purpose and connects you to your community.</p>
+                    </div>
+                    <div class="alternative-card">
+                        <div class="alternative-icon"><i class="fas fa-users"></i></div>
+                        <h3>Talk It Out</h3>
+                        <p>Reach out to friends, family, or counselors when you're struggling.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">What if my friends pressure me to try drugs?</div>
+                        <p>True friends will respect your decision to stay drug-free. Practice saying "no" confidently, suggest alternative activities, or remove yourself from the situation. If the pressure continues, it might be time to find new friends who share your healthy values.</p>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Aren't some drugs safe in moderation?</div>
+                        <p>All drugs carry risks, especially for developing brains. What starts as "just trying it" can quickly lead to addiction. Many drugs today are laced with dangerous substances like fentanyl that can cause overdose even in small amounts.</p>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">How can I help someone struggling with addiction?</div>
+                        <p>Express your concern with compassion, encourage them to seek professional help, and offer your support. Contact local treatment centers or hotlines for guidance. Remember you can't force someone to change—they need to make that decision themselves.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta">
+                <h2>Take the First Step</h2>
+                <p>Commit to a drug-free lifestyle today. Your future self will thank you.</p>
+                <button id="pledgeButton">Take the Pledge</button>
+            </section>
+        </main>
+    </div>
+
+    <div id="about" class="section">
+        <div class="about-grid">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p class="about-description">We are a nonprofit organization dedicated to spreading awareness about the dangers of drug abuse and helping people make better life choices. Our team consists of educators, healthcare professionals, and individuals with lived experience who are committed to preventing substance abuse through education and community support.</p>
+                
+                <div class="mission-section">
+                    <h3>Our Mission</h3>
+                    <p>To empower individuals, especially youth, with the knowledge and resources they need to resist drug use and make healthy life decisions. We believe prevention through education is the most effective way to combat the drug epidemic.</p>
+                </div>
+                
+                <div class="programs-section">
+                    <h3>Our Programs</h3>
+                    <div class="programs-grid">
+                        <div class="program-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h4>School-based Prevention Workshops</h4>
+                            <p>Interactive sessions designed to educate and empower students.</p>
+                        </div>
+                        <div class="program-item">
+                            <i class="fas fa-bullhorn"></i>
+                            <h4>Community Awareness Campaigns</h4>
+                            <p>Spreading knowledge and prevention strategies throughout the community.</p>
+                        </div>
+                        <div class="program-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Support Groups</h4>
+                            <p>Safe spaces for families affected by addiction to find help and healing.</p>
+                        </div>
+                        <div class="program-item">
+                            <i class="fas fa-hands-helping"></i>
+                            <h4>Youth Mentorship</h4>
+                            <p>One-on-one guidance and support for at-risk youth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca" alt="Community Support and Education" class="about-hero-image">
+                <div class="image-caption">Making a difference in our community through education and support</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="vlog" class="section" style="background: #f8f9fa; padding: 4rem 2rem;">
+        <h2 style="text-align: center; color: #1a237e; margin-bottom: 1rem;">Our Educational Vlogs</h2>
+        <p style="text-align: center; margin-bottom: 3rem; color: #555; max-width: 600px; margin-left: auto; margin-right: auto;">Watch our educational videos about drug prevention and healthy living. New videos posted every week!</p>
+        
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 0 1rem;">
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="https://cdn.pixabay.com/photo/2021/11/19/15/59/psychology-6809746_1280.jpg" alt="Science of Addiction" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 1.5rem;">
+                    <h3 style="color: #1a237e; margin-bottom: 0.5rem;">The Science of Addiction</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem; line-height: 1.6;">Learn how drugs alter brain chemistry and why addiction is so hard to overcome.</p>
+                    <button style="background: #1a237e; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 6px; cursor: pointer; width: 100%; transition: background 0.3s ease;" onmouseover="this.style.background='#283593'" onmouseout="this.style.background='#1a237e'">Watch Now</button>
+                </div>
+            </div>
+            
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src=https://cdn.pixabay.com/photo/2022/05/19/22/30/depressed-7208268_1280.jpg alt="Peer Pressure" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 1.5rem;">
+                    <h3 style="color: #1a237e; margin-bottom: 0.5rem;">Peer Pressure: How to Say No</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem; line-height: 1.6;">Practical strategies for resisting pressure to use drugs in social situations.</p>
+                    <button style="background: #1a237e; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 6px; cursor: pointer; width: 100%; transition: background 0.3s ease;" onmouseover="this.style.background='#283593'" onmouseout="this.style.background='#1a237e'">Watch Now</button>
+                </div>
+            </div>
+            
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="https://cdn.pixabay.com/photo/2017/08/12/18/57/target-2635030_1280.jpg" alt="Recovery Stories" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 1.5rem;">
+                    <h3 style="color: #1a237e; margin-bottom: 0.5rem;">Recovery Stories: Hope for Change</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem; line-height: 1.6;">Inspirational interviews with people who overcame addiction.</p>
+                    <button style="background: #1a237e; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 6px; cursor: pointer; width: 100%; transition: background 0.3s ease;" onmouseover="this.style.background='#283593'" onmouseout="this.style.background='#1a237e'">Watch Now</button>
+                </div>
+            </div>
+
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="https://cdn.pixabay.com/photo/2017/09/25/15/18/stop-2785450_1280.jpg" alt="Understanding Drug Prevention" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 1.5rem;">
+                    <h3 style="color: #1a237e; margin-bottom: 0.5rem;">Understanding Drug Prevention</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem; line-height: 1.6;">Learn about effective strategies and methods to prevent drug abuse before it starts.</p>
+                    <button style="background: #1a237e; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 6px; cursor: pointer; width: 100%; transition: background 0.3s ease;" onmouseover="this.style.background='#283593'" onmouseout="this.style.background='#1a237e'">Watch Now</button>
+                </div>
+            </div>
+
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="https://cdn.pixabay.com/photo/2017/08/07/14/02/people-2604149_1280.jpg" alt="Healthy Lifestyle Choices" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 1.5rem;">
+                    <h3 style="color: #1a237e; margin-bottom: 0.5rem;">Healthy Lifestyle Choices</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem; line-height: 1.6;">Discover positive alternatives and activities that promote a healthy, drug-free lifestyle.</p>
+                    <button style="background: #1a237e; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 6px; cursor: pointer; width: 100%; transition: background 0.3s ease;" onmouseover="this.style.background='#283593'" onmouseout="this.style.background='#1a237e'">Watch Now</button>
+                </div>
+            </div>
+
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="https://cdn.pixabay.com/photo/2017/07/31/11/21/people-2557396_1280.jpg" alt="Building Support Networks" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 1.5rem;">
+                    <h3 style="color: #1a237e; margin-bottom: 0.5rem;">Building Support Networks</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem; line-height: 1.6;">The importance of community and family support in maintaining a drug-free life.</p>
+                    <button style="background: #1a237e; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 6px; cursor: pointer; width: 100%; transition: background 0.3s ease;" onmouseover="this.style.background='#283593'" onmouseout="this.style.background='#1a237e'">Watch Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="contact" class="section" style="background-color: #f8f9fa; padding: 4rem 2rem;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="text-align: center; color: #1a237e; font-size: 2.5rem; margin-bottom: 1rem;">Contact Us</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem;">Get in touch with us for support or more information about our campaign. We're here to help!</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+                <!-- Contact Form Section -->
+                <div style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <form style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div>
+                            <label for="name" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Full Name</label>
+                            <input type="text" id="name" style="width: 100%; padding: 0.8rem; border-radius: 6px; border: 2px solid #e0e0e0; transition: border-color 0.3s ease;" placeholder="Enter your name" onFocus="this.style.borderColor='#1a237e'" onBlur="this.style.borderColor='#e0e0e0'">
+                        </div>
+                        
+                        <div>
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Email Address</label>
+                            <input type="email" id="email" style="width: 100%; padding: 0.8rem; border-radius: 6px; border: 2px solid #e0e0e0; transition: border-color 0.3s ease;" placeholder="Enter your email" onFocus="this.style.borderColor='#1a237e'" onBlur="this.style.borderColor='#e0e0e0'">
+                        </div>
+
+                        <div>
+                            <label for="phone" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Phone Number</label>
+                            <input type="tel" id="phone" style="width: 100%; padding: 0.8rem; border-radius: 6px; border: 2px solid #e0e0e0; transition: border-color 0.3s ease;" placeholder="Enter your phone number" onFocus="this.style.borderColor='#1a237e'" onBlur="this.style.borderColor='#e0e0e0'">
+                        </div>
+                        
+                        <div>
+                            <label for="message" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Your Message</label>
+                            <textarea id="message" rows="5" style="width: 100%; padding: 0.8rem; border-radius: 6px; border: 2px solid #e0e0e0; transition: border-color 0.3s ease; resize: vertical;" placeholder="How can we help you?" onFocus="this.style.borderColor='#1a237e'" onBlur="this.style.borderColor='#e0e0e0'"></textarea>
+                        </div>
+                        
+                        <button type="submit" style="background: #1a237e; color: white; border: none; padding: 1rem; border-radius: 6px; cursor: pointer; font-weight: 500; font-size: 1.1rem; transition: all 0.3s ease;" onmouseover="this.style.background='#283593'" onmouseout="this.style.background='#1a237e'">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information Section -->
+                <div style="display: flex; flex-direction: column; gap: 2rem;">
+                    <!-- Emergency Contact -->
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <h3 style="color: #1a237e; margin-bottom: 1rem; font-size: 1.5rem;">Need Immediate Help?</h3>
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <i class="fas fa-phone" style="color: #1a237e; font-size: 1.5rem;"></i>
+                            <div>
+                                <p style="font-weight: 500; color: #333;">National Helpline</p>
+                                <p style="color: #1a237e; font-size: 1.2rem; font-weight: bold;">1-800-662-HELP (4357)</p>
+                            </div>
+                        </div>
+                        <p style="color: #666;">24/7, free and confidential treatment referral and information service</p>
+                    </div>
+
+                    <!-- Location -->
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <h3 style="color: #1a237e; margin-bottom: 1rem; font-size: 1.5rem;">Visit Us</h3>
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <i class="fas fa-map-marker-alt" style="color: #1a237e; font-size: 1.5rem;"></i>
+                            <div>
+                                <p style="font-weight: 500; color: #333;">Our Location</p>
+                                <p style="color: #666;">123 Recovery Street, Health City, ST 12345</p>
+                            </div>
+                        </div>
+                        <div class="map" style="width: 100%; height: 200px; background: #e0e0e0; border-radius: 8px; margin-top: 1rem; overflow: hidden;">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30596698663!2d-74.25987368715491!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1645868686906!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <h3 style="color: #1a237e; margin-bottom: 1rem; font-size: 1.5rem;">Connect With Us</h3>
+                        <div style="display: flex; gap: 1rem; justify-content: center;">
+                            <a href="#" style="color: #1a237e; font-size: 1.8rem; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-facebook"></i></a>
+                            <a href="#" style="color: #1a237e; font-size: 1.8rem; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-twitter"></i></a>
+                            <a href="#" style="color: #1a237e; font-size: 1.8rem; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-instagram"></i></a>
+                            <a href="#" style="color: #1a237e; font-size: 1.8rem; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <p>24/7, free and confidential treatment referral and information service</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+          <div class="footer-message">
+            <h3>Stay Clean, Stay Strong 💚</h3>
+            <p>Join the movement to create a drug-free world. Together, we can make a difference.</p>
+          </div>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Resources</a>
+            <a href="#">Volunteer</a>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2024 Say No to Drugs Campaign. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pledgeButton = document.getElementById('pledgeButton');
+            
+            pledgeButton.addEventListener('click', function() {
+                alert("Thank you for taking the pledge to stay drug-free! Your commitment to a healthy lifestyle makes a difference.\n\nBy pledging, you promise to:\n- Avoid all illegal drugs\n- Use prescription medications only as directed\n- Make healthy choices for your body and mind\n- Support others in staying drug-free");
+            });
+        });
+
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+    </script>
+</body>
+</html>
